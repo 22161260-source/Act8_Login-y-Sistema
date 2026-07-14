@@ -9,7 +9,7 @@ VARGAS VICENTE IVONEE MONTSERRAT 22161260
 ## API elegida para la tabla de datos
 DummyJSON Productos — https://dummyjson.com/products
 
-## Proyecto desplegado
+
 
 
 ## Cómo correrlo en local
