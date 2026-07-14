@@ -11,16 +11,11 @@ import "./Productos.css";
 function Productos() {
   const [searchParams, setSearchParams] = useSearchParams();
 
-  // La página, el límite, el texto de búsqueda y la categoría viven en la URL
-  // (?page=2&limit=20&q=phone&categoria=smartphones) para poder compartir
-  // el enlace o usar el botón de "atrás" del navegador.
+
   const page = Number(searchParams.get("page") || 1);
   const limit = Number(searchParams.get("limit") || 10);
   const q = searchParams.get("q") || "";
   const categoria = searchParams.get("categoria") || "";
-
-  // Input de texto separado del filtro real: así no disparamos una
-  // petición en cada tecla, sino cuando el usuario confirma la búsqueda.
   const [textoBusqueda, setTextoBusqueda] = useState(q);
   const [categorias, setCategorias] = useState([]);
 
@@ -72,22 +67,13 @@ function Productos() {
     actualizarParametros({ limit: nuevoLimit, page: 1 });
   }
 
-  // Nota importante sobre DummyJSON (y APIs gratuitas similares): simulan
-  // la escritura pero NO persisten de verdad. Un producto creado con
-  // "add" recibe un id que no existe en su base real, así que un PUT o
-  // DELETE posterior sobre ese id puede responder con error (404).
-  // Por eso en los 3 handlers siempre hacemos la petición real primero
-  // (para practicarla y ver la respuesta), pero el estado local se
-  // actualiza de todas formas, haya o no error, para que la tabla se
-  // comporte de forma consistente sin importar la limitación de la API.
+
 
   async function handleGuardarNuevo(datos) {
     setGuardando(true);
     try {
       const creado = await crearProducto(datos);
-      // Id propio y único: el que devuelve la API puede repetirse si
-      // agregamos varios productos (DummyJSON siempre responde con el
-      // mismo id "siguiente" simulado).
+     
       setProductos((prev) => [
         {
           ...creado,
@@ -125,9 +111,6 @@ function Productos() {
       );
       setAvisoAccion("Producto editado correctamente.");
     } catch (err) {
-      // La API simulada puede fallar (p. ej. en productos creados
-      // localmente que no existen en su base real). Igual reflejamos
-      // el cambio en el estado local, que es lo que ve el usuario.
       setProductos((prev) =>
         prev.map((p) => (p.id === productoAEditar.id ? { ...p, ...datos } : p))
       );
