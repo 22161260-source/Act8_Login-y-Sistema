@@ -1,12 +1,7 @@
 import { useEffect, useState, useCallback } from "react";
 import { obtenerProductos } from "../api/productos";
 
-/**
- * Encapsula la carga de productos: recibe los filtros/paginación
- * actuales y expone productos, total, estado de carga y error.
- * También expone setProductos para que la página pueda reflejar
- * ahí mismo los cambios de las acciones CRUD (agregar/editar/eliminar).
- */
+
 export function useProductos({ q, categoria, page, limit }) {
   const [productos, setProductos] = useState([]);
   const [total, setTotal] = useState(0);
