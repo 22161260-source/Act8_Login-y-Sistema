@@ -25,9 +25,6 @@ Usuario de prueba (ver más en https://dummyjson.com/users): `emilys` / `emilysp
    ```bash
    npm run build
    ```
-3. Sube el contenido de la carpeta `dist/` (vía SSH/SCP/SFTP) a la ruta que sirve Nginx en tu VPS, dentro de la carpeta `t3_act8_eqXX`.
-4. Verifica que cargue en `http://IP_DE_SU_VPS/t3_act8_eqXX`.
-
 ## Estructura del proyecto
 ```
 src/
