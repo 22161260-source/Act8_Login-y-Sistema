@@ -1,14 +1,4 @@
 const BASE_URL = "https://dummyjson.com/products";
-
-/**
- * Trae una página de productos desde DummyJSON, aplicando (si vienen)
- * un texto de búsqueda y/o una categoría.
- *
- * Nota sobre la API: DummyJSON no permite combinar búsqueda por texto
- * y por categoría en una sola petición. Si el usuario usa ambos filtros
- * a la vez, pedimos por categoría (que sí soporta paginación real con
- * total correcto) y filtramos el texto sobre esos resultados en el cliente.
- */
 export async function obtenerProductos({ q = "", categoria = "", limit = 10, skip = 0 }) {
   let url;
 
@@ -55,12 +45,7 @@ export async function obtenerCategorias() {
   return datos.map((c) => (typeof c === "string" ? { slug: c, name: c } : c));
 }
 
-/**
- * Crea un producto. DummyJSON simula la escritura: responde 201 con
- * un id fijo pero no persiste el registro realmente. Por eso, después
- * de esta llamada, quien use esta función debe reflejar el cambio
- * en su propio estado local (useState) para que la tabla se actualice.
- */
+
 export async function crearProducto(producto) {
   const respuesta = await fetch(`${BASE_URL}/add`, {
     method: "POST",
