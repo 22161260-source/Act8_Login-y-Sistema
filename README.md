@@ -1,16 +1,16 @@
-# t3_act8_eqXX
+# t3_act8_eq13
 
 Mini sistema en React que simula un login con [DummyJSON](https://dummyjson.com/) y una tabla de datos con filtros, paginación y CRUD, consumiendo la API de productos de DummyJSON.
 
 ## Integrantes
-- Nombre completo — usuario de GitHub
-- Nombre completo — usuario de GitHub
+MATIAS CARREÑO MANUEL DE JESUS 22161159
+VARGAS VICENTE IVONEE MONTSERRAT 22161260 
 
 ## API elegida para la tabla de datos
 DummyJSON Productos — https://dummyjson.com/products
 
 ## Proyecto desplegado
-http://IP_DE_SU_VPS/t3_act8_eqXX
+
 
 ## Cómo correrlo en local
 ```bash
