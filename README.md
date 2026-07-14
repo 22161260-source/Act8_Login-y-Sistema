@@ -19,12 +19,7 @@ npm run dev
 ```
 Usuario de prueba (ver más en https://dummyjson.com/users): `emilys` / `emilyspass`
 
-## Build de producción y despliegue
-1. Edita `vite.config.js` y cambia `base: '/t3_act8_eqXX/'` por tu número de equipo real.
-2. Genera el build:
-   ```bash
-   npm run build
-   ```
+
 ## Estructura del proyecto
 ```
 src/
