@@ -3,10 +3,7 @@ import "./Modal.css";
 
 const VACIO = { title: "", category: "", price: "", stock: "" };
 
-/**
- * Modal con formulario para agregar o editar un producto.
- * Si recibe `productoInicial`, funciona en modo edición.
- */
+
 function ModalProducto({ productoInicial, categorias, onGuardar, onCancelar, guardando }) {
   const [form, setForm] = useState(
     productoInicial
