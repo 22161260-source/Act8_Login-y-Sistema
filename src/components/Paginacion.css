@@ -1,0 +1,47 @@
+.paginacion {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  margin-top: 1rem;
+  font-size: 0.9rem;
+  color: #4b5563;
+}
+
+.paginacion-controles {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+}
+
+.paginacion-limite {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+}
+
+.paginacion-limite select {
+  padding: 0.3rem 0.5rem;
+  border-radius: 6px;
+  border: 1px solid #d1d5db;
+}
+
+.paginacion-controles button {
+  padding: 0.4rem 0.75rem;
+  border-radius: 6px;
+  border: 1px solid #d1d5db;
+  background-color: #fff;
+  cursor: pointer;
+  font-size: 0.85rem;
+}
+
+.paginacion-controles button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.paginacion-numero {
+  font-weight: 600;
+  color: #1f2937;
+}

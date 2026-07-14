@@ -1,0 +1,71 @@
+.tabla-contenedor {
+  overflow-x: auto;
+  background-color: #ffffff;
+  border-radius: 10px;
+  border: 1px solid #e5e7eb;
+}
+
+.tabla-productos {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.9rem;
+}
+
+.tabla-productos th {
+  text-align: left;
+  padding: 0.75rem 1rem;
+  background-color: #f9fafb;
+  color: #374151;
+  font-weight: 600;
+  border-bottom: 1px solid #e5e7eb;
+  white-space: nowrap;
+}
+
+.tabla-productos td {
+  padding: 0.6rem 1rem;
+  border-bottom: 1px solid #f3f4f6;
+  color: #1f2937;
+  vertical-align: middle;
+}
+
+.tabla-thumb {
+  width: 42px;
+  height: 42px;
+  object-fit: cover;
+  border-radius: 6px;
+}
+
+.tabla-acciones {
+  display: flex;
+  gap: 0.5rem;
+  white-space: nowrap;
+}
+
+.btn-editar,
+.btn-eliminar {
+  padding: 0.35rem 0.65rem;
+  border-radius: 6px;
+  border: none;
+  font-size: 0.8rem;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.btn-editar {
+  background-color: #e0e7ff;
+  color: #4338ca;
+}
+
+.btn-eliminar {
+  background-color: #fee2e2;
+  color: #b91c1c;
+}
+
+.tabla-vacia {
+  padding: 2rem;
+  text-align: center;
+  color: #6b7280;
+  background-color: #ffffff;
+  border-radius: 10px;
+  border: 1px solid #e5e7eb;
+}

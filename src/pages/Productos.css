@@ -1,0 +1,48 @@
+.productos-encabezado {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 1rem;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+}
+
+.productos-filtros {
+  display: flex;
+  gap: 0.6rem;
+  margin-bottom: 1rem;
+  flex-wrap: wrap;
+}
+
+.productos-filtros input,
+.productos-filtros select {
+  padding: 0.55rem 0.75rem;
+  border: 1px solid #d1d5db;
+  border-radius: 6px;
+  font-size: 0.9rem;
+}
+
+.productos-filtros input {
+  flex: 1;
+  min-width: 200px;
+}
+
+.productos-estado {
+  padding: 1.5rem;
+  text-align: center;
+  color: #6b7280;
+}
+
+.productos-error {
+  color: #dc2626;
+}
+
+.productos-aviso {
+  background-color: #ecfdf5;
+  color: #047857;
+  border: 1px solid #a7f3d0;
+  padding: 0.6rem 0.9rem;
+  border-radius: 6px;
+  margin-bottom: 1rem;
+  font-size: 0.9rem;
+}
