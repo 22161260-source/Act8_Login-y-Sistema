@@ -1,3 +1,5 @@
+
+
 import { useState } from "react";
 import { loginUsuario } from "../api/auth";
 import "./Login.css";
@@ -12,7 +14,6 @@ function Login({ onLoginExitoso }) {
     evento.preventDefault();
     setError("");
 
-    // Validación de campos vacíos ANTES de hacer la petición
     if (!username.trim() || !password.trim()) {
       setError("Usuario y contraseña son obligatorios.");
       return;
